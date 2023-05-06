@@ -1,0 +1,6 @@
+from django.shortcuts import render
+from .scraper import scrape_data
+
+def home(request):
+    data = scrape_data()
+    return render(request, 'home.html', {'data': data})
